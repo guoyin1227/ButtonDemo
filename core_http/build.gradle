@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: "libs", include: ["*.jar"])
+    api 'androidx.appcompat:appcompat:1.2.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    //Retrofit
+    api rootProject.ext.dependencies["rxjava"]  //RxJava2
+    api rootProject.ext.dependencies["okhttp3"] //OkHttp
+    api rootProject.ext.dependencies["logging"]   //logging
+    api rootProject.ext.dependencies["gson"]   //Gson
+    api rootProject.ext.dependencies["rxandroid"]    //RxAndroid
+    api rootProject.ext.dependencies["retrofit"]   //Retrofit
+    api rootProject.ext.dependencies["adapter-rxjava"]  //Retrofit
+    api rootProject.ext.dependencies["converter-gson"]   //Retrofit
+
+}

@@ -1,0 +1,62 @@
+ext {
+
+
+    android = [
+            //sdk版本号
+            compileSdkVersion  : 29,
+            //编译版本
+            buildToolsVersion  : "29.0.3",
+            //包名
+            applicationId      : "com.core.demo",
+            //最小版本号
+            minSdkVersion      : 21,
+            //最大版本号
+            targetSdkVersion   : 29,
+            //版本码
+            versionCode        : 1,
+            //版本名称
+            versionName        : "1.0.0",
+            //rxJava+retrofit
+            rxjavaVersion      : "2.1.8",
+            okhttp3Version     : "3.9.1",
+            loggingVersion     : "3.9.1",
+            gsonVersion        : "2.8.2",
+            rxandroidVersion   : "2.0.1",
+            retrofitVersion    : "2.3.0",
+            //glide图片库
+            glideVersion       : "4.11.0",
+            //butterknife
+            butterknifeVersion : "10.2.3",
+            //smartrefresh
+            smartrefreshVersion: "1.1.0",
+            //eventbus消息传递
+            eventbusVersion    : "3.2.0",
+            //immersionbar沉浸式
+            immersionbarVersion: "3.0.0",
+    ]
+
+
+    dependencies = [
+            "rxjava"               : "io.reactivex.rxjava2:rxjava:${android["rxjavaVersion"]}",
+            "okhttp3"              : "com.squareup.okhttp3:okhttp:${android["okhttp3Version"]}",
+            "logging"              : "com.squareup.okhttp3:logging-interceptor:${android["loggingVersion"]}",
+            "gson"                 : "com.google.code.gson:gson:${android["gsonVersion"]}",
+            "rxandroid"            : "io.reactivex.rxjava2:rxandroid:${android["rxandroidVersion"]}",
+            "retrofit"             : "com.squareup.retrofit2:retrofit:${android["retrofitVersion"]}",
+            "adapter-rxjava"       : "com.squareup.retrofit2:adapter-rxjava2:${android["retrofitVersion"]}",
+            "converter-gson"       : "com.squareup.retrofit2:converter-gson:${android["retrofitVersion"]}",
+
+            "glide"                : "com.github.bumptech.glide:glide:${android["glideVersion"]}",
+            "glide_compiler"       : "com.github.bumptech.glide:compiler:${android["glideVersion"]}",
+            "glide_integration"    : "com.github.bumptech.glide:okhttp3-integration:${android["glideVersion"]}",
+
+            "butterknife"          : "com.jakewharton:butterknife:${android["butterknifeVersion"]}",
+            "butterknife-compiler" : "com.jakewharton:butterknife-compiler:${android["butterknifeVersion"]}",
+
+            "smartrefresh"         : "com.scwang.smartrefresh:SmartRefreshLayout:${android["smartrefreshVersion"]}",
+            "eventbus"             : "org.greenrobot:eventbus:${android["eventbusVersion"]}",
+            "immersionbar"         : "com.gyf.immersionbar:immersionbar:${android["immersionbarVersion"]}",
+    ]
+
+
+}
